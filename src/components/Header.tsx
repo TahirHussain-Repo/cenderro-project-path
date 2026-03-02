@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/cenderro-logo.png";
 
 const navLinks = [
   { label: "Path", href: "#path" },
@@ -17,8 +18,9 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-md">
       <div className="container flex h-16 items-center justify-between">
-        <a href="#" className="font-display text-xl font-bold tracking-tight text-foreground">
-          Cenderro
+        <a href="#" className="flex items-center gap-2">
+          <img src={logo} alt="Cenderro logo" className="h-8 w-8" />
+          <span className="font-display text-xl font-bold tracking-tight text-foreground">Cenderro</span>
         </a>
 
         {/* Desktop nav */}

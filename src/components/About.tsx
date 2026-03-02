@@ -7,10 +7,10 @@ const About = () => (
         </h2>
         <div className="mt-6 space-y-4 text-lg leading-relaxed text-muted-foreground">
           <p>
-            Inspired by the Spanish word <em>Sendero</em> — meaning path, journey, or roadmap — Cenderro exists to bring direction to an industry that often moves without visibility.
+            Inspired by the Spanish word <em>Sendero</em> — meaning path, journey, or roadmap — Cenderro was founded on a simple belief: every construction project deserves a clear route from concept to closeout.
           </p>
           <p>
-            Construction has been stuck with fragmented tools, manual coordination, and reactive decision-making. Cenderro introduces structure: a defined path where projects move forward with clarity, alignment, and momentum.
+            For too long, the industry has relied on scattered spreadsheets, phone calls, and gut instinct. Cenderro replaces guesswork with a defined operational framework — so teams always know where a project stands and what comes next.
           </p>
         </div>
       </div>
