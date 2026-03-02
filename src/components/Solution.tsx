@@ -3,9 +3,9 @@ import { Eye, GitMerge, TrendingUp, ArrowRight } from "lucide-react";
 const steps = ["Planning", "Approval", "Materials", "Scheduling", "Execution", "Completion"];
 
 const pillars = [
-  { icon: Eye, title: "Visibility", desc: "Know what's happening instantly across every project." },
-  { icon: GitMerge, title: "Coordination", desc: "Fewer handoffs, less friction, smoother operations." },
-  { icon: TrendingUp, title: "Momentum", desc: "Projects move forward by design, not by accident." },
+  { icon: Eye, title: "Real-Time Awareness", desc: "Every stakeholder sees the same live picture — no more asking 'where are we?'" },
+  { icon: GitMerge, title: "Seamless Handoffs", desc: "Approvals, materials, and crews flow into each other without manual relay." },
+  { icon: TrendingUp, title: "Built-In Momentum", desc: "Automated checkpoints keep projects on pace so nothing stalls silently." },
 ];
 
 const Solution = () => (
