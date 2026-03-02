@@ -1,8 +1,8 @@
 const steps = [
-  { num: "01", title: "Intake & scope the opportunity", desc: "Whether it's an inbound lead or a field assessment, the project enters Cenderro with full context." },
-  { num: "02", title: "Map milestones automatically", desc: "Cenderro generates a stage-by-stage roadmap tailored to the project type and trade." },
-  { num: "03", title: "Track progress in real time", desc: "Every approval, delivery, and crew action is logged — keeping the whole team on the same page." },
-  { num: "04", title: "Close with a complete record", desc: "Final documentation, financials, and lessons learned are captured automatically at project end." },
+  { num: "01", title: "Capture the project intent", desc: "Lead, request, or scope — every project starts with clarity." },
+  { num: "02", title: "Turn it into a structured journey", desc: "Transform intent into a trackable project with defined milestones." },
+  { num: "03", title: "Guide execution with milestones", desc: "Keep teams aligned with clear checkpoints across the construction lifecycle." },
+  { num: "04", title: "Close out with confidence", desc: "Complete projects with full documentation and operational insights." },
 ];
 
 const HowItWorks = () => (

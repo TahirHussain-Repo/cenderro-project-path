@@ -1,10 +1,10 @@
 import { Unplug, Clock, EyeOff, MessageCircleWarning } from "lucide-react";
 
 const problems = [
-  { icon: Unplug, title: "Siloed platforms that don't talk to each other" },
-  { icon: Clock, title: "Hours wasted on status calls and email chains" },
-  { icon: EyeOff, title: "No single source of truth for project health" },
-  { icon: MessageCircleWarning, title: "Decisions made on outdated information" },
+  { icon: Unplug, title: "Disconnected tools slow progress" },
+  { icon: Clock, title: "Manual coordination creates delays" },
+  { icon: EyeOff, title: "Low visibility causes uncertainty" },
+  { icon: MessageCircleWarning, title: "Teams lose time chasing updates" },
 ];
 
 const Problem = () => (

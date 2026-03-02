@@ -18,7 +18,7 @@ const Hero = () => (
           <span className="text-primary">We're Building It.</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-          From the first lead to the final sign-off, Cenderro gives construction teams a single, structured workflow — replacing scattered tools with one clear operational path.
+          Cenderro is revolutionizing construction by turning complex projects into clear, trackable journeys — from planning to completion — across roofing, restoration, and beyond.
         </p>
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Button asChild size="lg" className="gap-2 px-8">

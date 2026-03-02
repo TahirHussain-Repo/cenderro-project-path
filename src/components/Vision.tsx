@@ -14,7 +14,7 @@ const Vision = () => (
           More Than a Contractor
         </h2>
         <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-          Cenderro began in roofing and storm restoration — the most operationally chaotic corner of construction. That's where we pressure-tested our approach. Now we're expanding it into a universal standard for how projects are planned, tracked, and completed across every trade.
+          Cenderro started in roofing, but it's built for all of construction. Our mission is to standardize the way projects move — making construction predictable instead of reactive, visible instead of uncertain, and structured instead of fragmented.
         </p>
         <div className="mt-10 space-y-4">
           {futureItems.map(({ icon: Icon, text }, i) => (
