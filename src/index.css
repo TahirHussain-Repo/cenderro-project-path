@@ -110,37 +110,47 @@
   }
 }
 
-@keyframes logo-draw {
+@keyframes loader-scale-in {
   0% {
-    stroke-dashoffset: 1200;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes logo-spin {
-  0% {
-    transform: rotate(0deg) scale(0.8);
+    transform: scale(0.5) rotate(-180deg);
     opacity: 0;
   }
-  30% {
+  60% {
+    transform: scale(1.1) rotate(10deg);
     opacity: 1;
-    transform: rotate(0deg) scale(1);
   }
   100% {
-    transform: rotate(360deg) scale(1);
+    transform: scale(1) rotate(0deg);
     opacity: 1;
   }
 }
 
-.animate-logo-spin {
-  animation: logo-spin 1.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+@keyframes loader-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
 }
 
-.animate-logo-spin svg circle,
-.animate-logo-spin svg path {
-  stroke-dasharray: 600;
-  stroke-dashoffset: 600;
-  animation: logo-draw 1.4s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
+@keyframes loader-text-in {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loader-icon {
+  animation: loader-scale-in 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+    loader-pulse 1.6s ease-in-out 0.8s infinite;
+}
+
+.loader-text {
+  opacity: 0;
+  animation: loader-text-in 0.5s ease-out 0.6s forwards;
 }
