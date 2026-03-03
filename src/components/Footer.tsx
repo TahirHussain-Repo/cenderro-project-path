@@ -7,12 +7,15 @@ const links = [
   { label: "Contact", href: "#contact" },
 ];
 
+import CenderroLogo from "./CenderroLogo";
+
 const Footer = () => (
   <footer className="border-t border-border bg-secondary">
     <div className="container flex flex-col items-center gap-6 py-10 md:flex-row md:justify-between">
-      <p className="text-sm text-muted-foreground">
-        &copy; {new Date().getFullYear()} Cenderro. All rights reserved.
-      </p>
+      <div className="flex items-center gap-2 text-sm text-muted-foreground">
+        <CenderroLogo size={20} />
+        <span>&copy; {new Date().getFullYear()} Cenderro. All rights reserved.</span>
+      </div>
       <nav className="flex flex-wrap items-center justify-center gap-6" aria-label="Footer navigation">
         {links.map((link) => (
           <a

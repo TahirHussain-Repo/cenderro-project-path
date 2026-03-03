@@ -109,3 +109,38 @@
     text-wrap: balance;
   }
 }
+
+@keyframes logo-draw {
+  0% {
+    stroke-dashoffset: 1200;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes logo-spin {
+  0% {
+    transform: rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-logo-spin {
+  animation: logo-spin 1.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-logo-spin svg circle,
+.animate-logo-spin svg path {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: logo-draw 1.4s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
+}
