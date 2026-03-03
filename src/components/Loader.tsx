@@ -23,7 +23,7 @@ const Loader = ({ onComplete }: { onComplete: () => void }) => {
         <img
           src={cenderroIcon}
           alt="Cenderro"
-          className="h-20 w-20"
+          className="h-28 w-28"
         />
       </div>
       <p className="mt-6 loader-text font-display text-lg font-semibold tracking-tight text-foreground">
