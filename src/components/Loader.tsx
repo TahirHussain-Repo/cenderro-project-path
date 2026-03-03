@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import cenderroIcon from "@/assets/cenderro-icon.png";
+import CenderroLogo from "./CenderroLogo";
 
 const Loader = ({ onComplete }: { onComplete: () => void }) => {
   const [phase, setPhase] = useState<"loading" | "fading">("loading");
 
   useEffect(() => {
-    const loadTimer = setTimeout(() => setPhase("fading"), 2000);
-    const doneTimer = setTimeout(onComplete, 2600);
+    const loadTimer = setTimeout(() => setPhase("fading"), 1800);
+    const doneTimer = setTimeout(onComplete, 2400);
     return () => {
       clearTimeout(loadTimer);
       clearTimeout(doneTimer);
@@ -19,14 +19,10 @@ const Loader = ({ onComplete }: { onComplete: () => void }) => {
         phase === "fading" ? "opacity-0" : "opacity-100"
       }`}
     >
-      <div className="loader-icon">
-        <img
-          src={cenderroIcon}
-          alt="Cenderro"
-          className="h-28 w-28"
-        />
+      <div className="animate-logo-spin text-foreground">
+        <CenderroLogo size={72} />
       </div>
-      <p className="mt-6 loader-text font-display text-lg font-semibold tracking-tight text-foreground">
+      <p className="mt-6 animate-fade-in font-display text-lg font-semibold tracking-tight text-foreground">
         Cenderro
       </p>
     </div>
