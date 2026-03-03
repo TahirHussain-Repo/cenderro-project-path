@@ -34,6 +34,9 @@ const Header = () => {
               {link.label}
             </a>
           ))}
+          <Button asChild variant="outline" size="sm">
+            <a href="/login">Login</a>
+          </Button>
           <Button asChild size="sm">
             <a href="#contact">Join the Journey</a>
           </Button>
@@ -64,6 +67,9 @@ const Header = () => {
                 {link.label}
               </a>
             ))}
+            <Button asChild variant="outline" size="sm" className="w-full">
+              <a href="/login" onClick={() => setOpen(false)}>Login</a>
+            </Button>
             <Button asChild size="sm" className="w-full">
               <a href="#contact" onClick={() => setOpen(false)}>Join the Journey</a>
             </Button>
