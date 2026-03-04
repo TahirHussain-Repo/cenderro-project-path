@@ -24,7 +24,7 @@ const Header = () => {
         </a>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Main navigation">
+        <nav className="hidden items-center gap-6 lg:flex" aria-label="Main navigation">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -44,7 +44,7 @@ const Header = () => {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden p-2 text-foreground"
+          className="lg:hidden p-2 text-foreground"
           onClick={() => setOpen(!open)}
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
@@ -55,7 +55,7 @@ const Header = () => {
 
       {/* Mobile menu */}
       {open && (
-        <nav className="border-t border-border bg-background px-6 pb-6 pt-4 md:hidden" aria-label="Mobile navigation">
+        <nav className="border-t border-border bg-background px-6 pb-6 pt-4 lg:hidden" aria-label="Mobile navigation">
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
