@@ -46,12 +46,6 @@ const Hero = () => (
 
     <div className="container relative py-20 md:py-32 lg:py-40">
       <div className="mx-auto max-w-3xl text-center">
-        {/* Small badge */}
-        <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-4 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur-sm">
-          <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-          Now in early access
-        </div>
-
         <h1 className="font-display text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance">
           Construction Needs a Path.{" "}
           <span className="text-primary">We're Building It.</span>
