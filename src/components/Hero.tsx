@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Eye, Zap, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const trustItems = ["Built for clarity", "Designed for speed", "Made to scale"];
 
@@ -11,8 +11,47 @@ const Hero = () => (
       backgroundSize: "60px 60px"
     }} aria-hidden="true" />
 
+    {/* Decorative architectural lines */}
+    <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+      {/* Large arc — top right */}
+      <svg className="absolute -top-32 -right-32 w-[600px] h-[600px] text-primary opacity-[0.07]" viewBox="0 0 600 600" fill="none">
+        <circle cx="300" cy="300" r="280" stroke="currentColor" strokeWidth="1.5" />
+        <circle cx="300" cy="300" r="220" stroke="currentColor" strokeWidth="1" />
+        <circle cx="300" cy="300" r="160" stroke="currentColor" strokeWidth="0.75" />
+      </svg>
+
+      {/* Small arc — bottom left */}
+      <svg className="absolute -bottom-20 -left-20 w-[400px] h-[400px] text-primary opacity-[0.05]" viewBox="0 0 400 400" fill="none">
+        <circle cx="200" cy="200" r="180" stroke="currentColor" strokeWidth="1.5" />
+        <circle cx="200" cy="200" r="130" stroke="currentColor" strokeWidth="1" />
+      </svg>
+
+      {/* Diagonal line */}
+      <svg className="absolute top-0 left-0 w-full h-full text-primary opacity-[0.04]" viewBox="0 0 1200 800" fill="none" preserveAspectRatio="none">
+        <line x1="0" y1="800" x2="1200" y2="200" stroke="currentColor" strokeWidth="1" />
+        <line x1="0" y1="700" x2="1200" y2="100" stroke="currentColor" strokeWidth="0.5" />
+      </svg>
+
+      {/* Zigzag motif echoing the logo */}
+      <svg className="absolute bottom-16 right-8 md:right-24 w-[320px] h-[120px] text-primary opacity-[0.06]" viewBox="0 0 320 120" fill="none">
+        <path d="M 0 90 L 50 30 L 100 70 L 150 20 L 200 70 L 250 30 L 320 90" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+
+      {/* Floating dots */}
+      <div className="absolute top-20 left-[15%] h-2 w-2 rounded-full bg-primary opacity-[0.12]" />
+      <div className="absolute top-40 right-[20%] h-1.5 w-1.5 rounded-full bg-primary opacity-[0.10]" />
+      <div className="absolute bottom-32 left-[40%] h-1 w-1 rounded-full bg-primary opacity-[0.15]" />
+      <div className="absolute top-[60%] left-[10%] h-1.5 w-1.5 rounded-full bg-primary opacity-[0.08]" />
+    </div>
+
     <div className="container relative py-20 md:py-32 lg:py-40">
       <div className="mx-auto max-w-3xl text-center">
+        {/* Small badge */}
+        <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-4 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur-sm">
+          <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
+          Now in early access
+        </div>
+
         <h1 className="font-display text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance">
           Construction Needs a Path.{" "}
           <span className="text-primary">We're Building It.</span>
