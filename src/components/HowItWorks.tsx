@@ -6,29 +6,58 @@ const steps = [
 ];
 
 const HowItWorks = () => (
-  <section id="how" className="bg-secondary">
+  <section id="how" className="bg-secondary overflow-hidden">
     <div className="container py-20 md:py-28">
       <div className="mx-auto max-w-3xl text-center">
         <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
           The Cenderro Path
         </h2>
       </div>
-      <div className="mx-auto mt-12 grid max-w-2xl gap-0">
-        {steps.map(({ num, title, desc }, i) => (
-          <div key={i} className="relative flex gap-6 pb-10 last:pb-0">
-            {/* Vertical line */}
-            {i < steps.length - 1 && (
-              <div className="absolute left-5 top-10 h-full w-px bg-border" aria-hidden="true" />
-            )}
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-primary bg-primary/10 font-display text-sm font-bold text-primary">
-              {num}
+
+      <div className="relative mx-auto mt-16 max-w-4xl">
+        {/* Winding SVG path */}
+        <svg
+          className="absolute inset-0 h-full w-full pointer-events-none"
+          viewBox="0 0 800 600"
+          preserveAspectRatio="none"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M 100 60 C 300 60, 700 60, 700 150 C 700 240, 100 240, 100 330 C 100 420, 700 420, 700 510 C 700 560, 500 570, 400 570"
+            stroke="hsl(var(--primary) / 0.15)"
+            strokeWidth="3"
+            strokeDasharray="12 8"
+            fill="none"
+          />
+          <path
+            d="M 100 60 C 300 60, 700 60, 700 150 C 700 240, 100 240, 100 330 C 100 420, 700 420, 700 510 C 700 560, 500 570, 400 570"
+            stroke="hsl(var(--primary) / 0.06)"
+            strokeWidth="40"
+            strokeLinecap="round"
+            fill="none"
+          />
+        </svg>
+
+        {/* Step cards alternating left/right */}
+        <div className="relative grid grid-cols-1 gap-12 md:gap-16">
+          {steps.map(({ num, title, desc }, i) => (
+            <div
+              key={i}
+              className={`relative flex items-start gap-5 md:w-[55%] ${
+                i % 2 === 0 ? "md:mr-auto md:pr-8" : "md:ml-auto md:pl-8"
+              }`}
+            >
+              <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-primary bg-background font-display text-sm font-bold text-primary shadow-md">
+                {num}
+              </div>
+              <div className="pt-1">
+                <h3 className="font-display text-base font-semibold text-foreground">{title}</h3>
+                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{desc}</p>
+              </div>
             </div>
-            <div className="pt-1">
-              <h3 className="font-display text-base font-semibold text-foreground">{title}</h3>
-              <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{desc}</p>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   </section>
