@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { CrossGrid, DotField, ZigzagMotif } from "./Decorations";
 
 const faqs = [
   {
@@ -29,8 +30,18 @@ const faqs = [
 ];
 
 const FAQ = () => (
-  <section id="faq" className="bg-secondary">
-    <div className="container py-20 md:py-28">
+  <section id="faq" className="relative bg-secondary overflow-hidden">
+    <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+      <CrossGrid className="absolute top-6 left-6 w-[100px] h-[100px] text-primary opacity-[0.04]" />
+      <ZigzagMotif className="absolute bottom-10 right-10 w-[160px] h-[60px] text-primary opacity-[0.04] rotate-2" />
+      <DotField dots={[
+        { top: "25%", left: "92%", size: "4px", opacity: "0.07" },
+        { top: "60%", left: "3%", size: "5px", opacity: "0.06" },
+        { top: "85%", left: "50%", size: "3px", opacity: "0.08" },
+      ]} />
+      <div className="absolute top-[40%] left-0 w-[70px] h-px bg-primary opacity-[0.05]" />
+    </div>
+    <div className="container relative py-20 md:py-28">
       <div className="mx-auto max-w-2xl">
         <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-center">
           Frequently Asked Questions

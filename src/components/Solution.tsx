@@ -1,4 +1,5 @@
 import { Eye, GitMerge, TrendingUp, ArrowRight } from "lucide-react";
+import { ConcentricCircles, CrossGrid, DotField, ArchitecturalBracket } from "./Decorations";
 
 const steps = ["Planning", "Approval", "Materials", "Scheduling", "Execution", "Completion"];
 
@@ -9,8 +10,19 @@ const pillars = [
 ];
 
 const Solution = () => (
-  <section className="border-t border-border">
-    <div className="container py-20 md:py-28">
+  <section className="relative border-t border-border overflow-hidden">
+    <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+      <ConcentricCircles className="absolute -bottom-32 -left-32 w-[500px] h-[500px] text-primary opacity-[0.04]" rings={3} />
+      <CrossGrid className="absolute top-8 right-8 w-[140px] h-[140px] text-primary opacity-[0.04]" />
+      <ArchitecturalBracket className="absolute bottom-12 right-[8%] w-[30px] h-[120px] text-primary opacity-[0.05]" />
+      <DotField dots={[
+        { top: "10%", left: "50%", size: "4px", opacity: "0.08" },
+        { top: "85%", left: "15%", size: "6px", opacity: "0.06" },
+        { top: "30%", left: "95%", size: "5px", opacity: "0.07" },
+      ]} />
+      <div className="absolute top-[45%] left-0 w-[100px] h-px bg-primary opacity-[0.06]" />
+    </div>
+    <div className="container relative py-20 md:py-28">
       <div className="mx-auto max-w-3xl text-center">
         <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
           Flow for Every Project
