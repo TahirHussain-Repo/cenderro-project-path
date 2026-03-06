@@ -1,13 +1,13 @@
+import { Link } from "react-router-dom";
+import CenderroLogo from "./CenderroLogo";
+
 const links = [
   { label: "Path", href: "#path" },
   { label: "Why", href: "#why" },
   { label: "How It Works", href: "#how" },
   { label: "Vision", href: "#vision" },
   { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
 ];
-
-import CenderroLogo from "./CenderroLogo";
 
 const Footer = () => (
   <footer className="border-t border-border bg-secondary">
@@ -26,6 +26,15 @@ const Footer = () => (
             {link.label}
           </a>
         ))}
+        <Link to="/contact" className="text-xs text-muted-foreground transition-colors hover:text-foreground">
+          Contact
+        </Link>
+        <Link to="/terms" className="text-xs text-muted-foreground transition-colors hover:text-foreground">
+          Terms
+        </Link>
+        <Link to="/privacy" className="text-xs text-muted-foreground transition-colors hover:text-foreground">
+          Privacy
+        </Link>
       </nav>
       <a href="mailto:hello@cenderro.com" className="text-xs text-muted-foreground hover:text-foreground">
         hello@cenderro.com
