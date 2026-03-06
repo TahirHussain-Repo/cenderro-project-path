@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import {
@@ -76,7 +77,7 @@ const Hero = () => (
             </a>
           </Button>
           <Button asChild variant="outline" size="lg" className="px-8">
-            <a href="#contact">Talk to Us</a>
+            <Link to="/contact">Talk to Us</Link>
           </Button>
         </div>
       </div>

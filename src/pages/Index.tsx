@@ -7,7 +7,6 @@ import Solution from "@/components/Solution";
 import HowItWorks from "@/components/HowItWorks";
 import Vision from "@/components/Vision";
 import FAQ from "@/components/FAQ";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Loader from "@/components/Loader";
 
@@ -27,7 +26,6 @@ const Index = () => {
         <HowItWorks />
         <Vision />
         <FAQ />
-        <Contact />
       </main>
       <Footer />
     </>

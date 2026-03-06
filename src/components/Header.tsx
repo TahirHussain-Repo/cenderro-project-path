@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import CenderroLogo from "./CenderroLogo";
@@ -9,7 +10,6 @@ const navLinks = [
   { label: "How It Works", href: "#how" },
   { label: "Vision", href: "#vision" },
   { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
 ];
 
 const Header = () => {
@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-md">
       <div className="container flex h-16 items-center justify-between">
-        <a href="#" className="flex items-center gap-2 font-display text-xl font-bold tracking-tight text-foreground">
+        <a href="/" className="flex items-center gap-2 font-display text-xl font-bold tracking-tight text-foreground">
           <CenderroLogo size={28} />
           Cenderro
         </a>
@@ -38,7 +38,7 @@ const Header = () => {
             <a href="/login">Log In</a>
           </Button>
           <Button asChild size="sm">
-            <a href="#contact">Join the Journey</a>
+            <Link to="/contact">Join the Journey</Link>
           </Button>
         </nav>
 
@@ -71,7 +71,7 @@ const Header = () => {
               <a href="/login" onClick={() => setOpen(false)}>Log In</a>
             </Button>
             <Button asChild size="sm" className="w-full">
-              <a href="#contact" onClick={() => setOpen(false)}>Join the Journey</a>
+              <Link to="/contact" onClick={() => setOpen(false)}>Join the Journey</Link>
             </Button>
           </div>
         </nav>
