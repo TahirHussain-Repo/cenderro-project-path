@@ -1,3 +1,5 @@
+import { GridBackground, ArchitecturalBracket, DotField, BlueprintCorner } from "./Decorations";
+
 const steps = [
   { num: "01", title: "Capture the project intent", desc: "Lead, request, or scope — every project starts with clarity." },
   { num: "02", title: "Turn it into a structured journey", desc: "Transform intent into a trackable project with defined milestones." },
@@ -6,8 +8,19 @@ const steps = [
 ];
 
 const HowItWorks = () => (
-  <section id="how" className="bg-secondary overflow-hidden">
-    <div className="container py-20 md:py-28">
+  <section id="how" className="relative bg-secondary overflow-hidden">
+    <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+      <GridBackground opacity={0.02} />
+      <ArchitecturalBracket className="absolute top-16 left-[5%] w-[30px] h-[120px] text-primary opacity-[0.05]" />
+      <BlueprintCorner className="absolute bottom-8 right-8 w-[60px] h-[60px] text-primary opacity-[0.06] rotate-180" />
+      <DotField dots={[
+        { top: "18%", left: "88%", size: "5px", opacity: "0.07" },
+        { top: "55%", left: "3%", size: "4px", opacity: "0.08" },
+        { top: "80%", left: "70%", size: "6px", opacity: "0.06" },
+      ]} />
+      <div className="absolute top-[35%] right-0 w-[90px] h-px bg-primary opacity-[0.06]" />
+    </div>
+    <div className="container relative py-20 md:py-28">
       <div className="mx-auto max-w-3xl text-center">
         <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
           The Cenderro Path

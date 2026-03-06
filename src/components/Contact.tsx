@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
+import { GridBackground, ConcentricCircles, DotField } from "./Decorations";
 
 const Contact = () => {
   const [sending, setSending] = useState(false);
@@ -18,8 +19,17 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="border-t border-border">
-      <div className="container py-20 md:py-28">
+    <section id="contact" className="relative border-t border-border overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+        <GridBackground opacity={0.02} />
+        <ConcentricCircles className="absolute -top-20 -left-20 w-[300px] h-[300px] text-primary opacity-[0.04]" rings={2} />
+        <DotField dots={[
+          { top: "20%", left: "90%", size: "5px", opacity: "0.07" },
+          { top: "80%", left: "8%", size: "4px", opacity: "0.08" },
+        ]} />
+        <div className="absolute bottom-[20%] right-0 w-[80px] h-px bg-primary opacity-[0.06]" />
+      </div>
+      <div className="container relative py-20 md:py-28">
         <div className="mx-auto max-w-xl text-center">
           <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Join the Journey
